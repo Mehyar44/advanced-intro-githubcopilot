@@ -12,5 +12,7 @@ GitHub Copilot brings a ChatGPT-like chat interface to the editor. The chat inte
 ### Copilot for pull requests
 OpenAI's GPT-4 model adds support in GitHub Copilot for AI-powered tags in pull-request descriptions through a GitHub app that organization admins and individual repository owners can install. GitHub Copilot automatically fills out these tags based on the changed code. Developers can then review or modify the suggested descriptions.
 
+### Let's Build a Website with Copilot
+Jump in to building [HelpHub.AI](/lesson-1.3/helphub.ai/README.md)
 ## Getting Started with GitHub Copilot
 Let's just get started!  [Complete the exercise to learn about these features](https://github.com/skills/getting-started-with-github-copilot).

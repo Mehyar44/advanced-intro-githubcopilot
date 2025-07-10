@@ -12,8 +12,8 @@
 ## ✔️ Activities[50 minutes]
 
 - [Get Started with GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot)
-- [Build fully functional website)](/lesson-1.3/tutor-signup/README.md)
-- Complete assessment to earn your Introduction to Copilot and Using GitHub Copilot with Python Badge
+- [Build fully functional website](helphub.ai/README.md)
+- [Complete assessment to earn your Introduction to Copilot and Using GitHub Copilot with Python Badge](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/?ns-enrollment-type=Collection&ns-enrollment-id=kkw8b2twr638w6)
 
 
 ** To get started, fork this repo if you haven't already.
