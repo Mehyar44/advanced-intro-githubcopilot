@@ -1,10 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Everything Coaching!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+            padding: 36px 28px 28px 28px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.1rem;
+            margin-bottom: 10px;
+            color: #1a237e;
+            letter-spacing: 1px;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #607d8b;
+            margin-bottom: 28px;
+            font-size: 1.08rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        label {
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"] {
+            padding: 10px 12px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: #f7fafc;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 4px;
+            margin-top: 12px;
+        }
+        .option-label {
+            display: flex;
+            align-items: center;
+            background: #f1f8e9;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.98rem;
+            cursor: pointer;
+            border: 1px solid #c5e1a5;
+            transition: background 0.2s, border 0.2s;
+        }
+        .option-label input[type="checkbox"] {
+            margin-right: 7px;
+        }
+        .option-label:hover {
+            background: #e6ee9c;
+            border-color: #aed581;
+        }
+        .days-times {
+            display: flex;
+            gap: 0;
+            justify-content: space-between;
+        }
+        .days-times > div {
+            flex: 1 1 0;
+        }
+        .days-times input {
+            width: 100%;
+            max-width: none;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.08rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #0d47a1;
+        }
+        .success-message {
+            text-align: center;
+            color: #388e3c;
+            font-weight: 600;
+            margin-top: 18px;
+            font-size: 1.08rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 2px;">
+            <svg width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <!-- Outer 8-pointed star (black) -->
+                    <polygon points="24,4 28,13 38,8 32,17 43,19 34,24 43,29 32,31 38,40 28,35 24,44 20,35 10,40 16,31 5,29 14,24 5,19 16,17 10,8 20,13" fill="#000"/>
+                    <!-- Inner 8-pointed star (gray) -->
+                    <polygon points="24,8 27,15 35,12 30,19 38,21 31,24 38,27 30,29 35,36 27,33 24,40 21,33 13,36 18,29 10,27 17,24 10,21 18,19 13,12 21,15" fill="#bdbdbd"/>
+                    <!-- White circle -->
+                    <circle cx="24" cy="24" r="10" fill="#fff" stroke="#000" stroke-width="1"/>
+                    <text x="24" y="25" text-anchor="middle" dominant-baseline="middle" font-size="8" font-family="Arial, sans-serif" fill="#000" font-weight="bold">FEC</text>
+                </g>
+            </svg>
+            <h1 style="margin: 0; text-align: center; width: 100%;">Free Everything Coaching!</h1>
+        </div>
+        <p class="subtitle">Sign up for coaching and support!</p>
+        <form id="signupForm" autocomplete="off">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="(555) 123-4567" pattern="[0-9\-()\s]+" />
+            </div>
+            <div>
+                <label>What would you like coaching in?</label>
+                <div class="options">
+                    <label class="option-label"><input type="checkbox" name="topics" value="Python Programming">Python Programming</label>
+                    <label class="option-label"><input type="checkbox" name="topics" value="Web Design">Web Design</label>
+                    <label class="option-label"><input type="checkbox" name="topics" value="Startup Ideas">Startup Ideas</label>
+                    <label class="option-label"><input type="checkbox" name="topics" value="College Application">College Application</label>
+                    <label class="option-label"><input type="checkbox" id="otherCheckbox" name="topics" value="Other">Other</label>
+                    <input type="text" id="otherInput" name="otherTopic" placeholder="example" style="display:none; margin-left:24px; margin-top:2px; border-radius:6px; border:1px solid #b0bec5; padding:8px 10px; font-size:0.98rem; background:#f7fafc;" />
+                </div>
+            </div>
+            <div class="days-times">
+                <div style="flex:1; margin-right: 10px;">
+                    <label for="days">Preferred Days:</label>
+                    <input type="text" id="days" name="days" placeholder="e.g. Mon, Wed, Fri" required />
+                </div>
+                <div style="flex:1;">
+                    <label for="times">Preferred Times:</label>
+                    <input type="text" id="times" name="times" placeholder="e.g. 3-5pm" required />
+                </div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div id="successMsg" class="success-message" style="display:none;">Thank you for signing up! We'll be in touch soon.</div>
+    </div>
+    <script>
+        const signupForm = document.getElementById('signupForm');
+        const successMsg = document.getElementById('successMsg');
+        const otherCheckbox = document.getElementById('otherCheckbox');
+        const otherInput = document.getElementById('otherInput');
+
+        if (otherCheckbox && otherInput) {
+            otherCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    otherInput.style.display = 'block';
+                } else {
+                    otherInput.style.display = 'none';
+                    otherInput.value = '';
+                }
+            });
+        }
+
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Optionally, collect form data here
+            signupForm.style.display = 'none';
+            successMsg.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
